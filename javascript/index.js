@@ -12,15 +12,28 @@ function updateTime() {
     );
   }
 
-  // Paris
-  let parisElement = document.querySelector("#paris");
-  if (parisElement) {
-    let parisDateElement = parisElement.querySelector(".date");
-    let parisTimeElement = parisElement.querySelector(".time");
-    let parisTime = moment().tz("Europe/Paris");
+  // Buenos Aires
+  let buenosAiresElement = document.querySelector("#buenos-aires");
+  if (buenosAiresElement) {
+    let buenosAiresDateElement = buenosAiresElement.querySelector(".date");
+    let buenosAiresTimeElement = buenosAiresElement.querySelector(".time");
+    let buenosAiresTime = moment().tz("America/Argentina/Buenos_Aires");
 
-    parisDateElement.innerHTML = parisTime.format("MMMM	Do YYYY");
-    parisTimeElement.innerHTML = parisTime.format(
+    buenosAiresDateElement.innerHTML = buenosAiresTime.format("MMMM	Do YYYY");
+    buenosAiresTimeElement.innerHTML = buenosAiresTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  // Cape Town
+  let capeTownElement = document.querySelector("#cape-town");
+  if (capeTownElement) {
+    let capeTownDateElement = capeTownElement.querySelector(".date");
+    let capeTownTimeElement = capeTownElement.querySelector(".time");
+    let capeTownTime = moment().tz("Africa/Johannesburg");
+
+    capeTownDateElement.innerHTML = capeTownTime.format("MMMM Do YYYY");
+    capeTownTimeElement.innerHTML = capeTownTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
