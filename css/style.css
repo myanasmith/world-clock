@@ -14,6 +14,10 @@ h2 {
   font-size: 28px;
 }
 
+a {
+  color: rgb(103, 98, 98);
+}
+
 select {
   display: block;
   width: 100%;
